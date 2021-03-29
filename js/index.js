@@ -1,11 +1,19 @@
 const navMenu = document.querySelector('.nav__list');
 const hamburger = document.querySelector('.hamburger');
 
-hamburger.addEventListener('click', function(){
+// Close navMenu on tablet and mobile
+function closeNav(){
+    navMenu.classList.remove('sah');
+}
+
+// Click hamburger toggle navMenu
+hamburger.addEventListener('click', function () {
     navMenu.classList.toggle('sah');
 })
 
-window.addEventListener('scroll', function(){
+
+// Scroll
+window.addEventListener('scroll', function () {
     const menuTop = document.querySelector('.header__content');
     const gotoTop = document.querySelector('.goto__top');
     const scrollHeight = window.pageYOffset;
@@ -14,11 +22,10 @@ window.addEventListener('scroll', function(){
     menuTop.classList.toggle('sticky', scrollHeight > 80);
 
     // Hide/show gotoTop
-    if(scrollHeight > 80){
+    if (scrollHeight > 80) {
         gotoTop.classList.add('showGoto__top');
         navMenu.style.top = '70px';
-    } else{
+    } else {
         gotoTop.classList.remove('showGoto__top');
     }
 })
-
