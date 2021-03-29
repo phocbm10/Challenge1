@@ -30,6 +30,7 @@ function indicatorSlide(element) {
     index = element.id;
     updateIndicator();
     changeSlide();
+    resetTimer();
 }
 
 function changeSlide() {
