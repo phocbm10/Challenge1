@@ -43,6 +43,7 @@ function changeSlide() {
 prev.addEventListener('click', function () {
     prevSlide();
     updateIndicator();
+    resetTimer();
 });
 
 function prevSlide() {
@@ -73,6 +74,7 @@ var timer = setInterval(autoplay, 4000);
 function autoplay() {
     nextSlide();
     updateIndicator();
+    resetTimer();
 }
 
 function resetTimer() {
